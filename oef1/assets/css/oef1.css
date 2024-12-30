@@ -1,0 +1,399 @@
+/*
+    naam: Dmitrii Iurev
+*/
+
+/*
+Hint: 
+    (1) Omzetten naar hoofdletters:
+            text-transform: uppercase;
+    (2) Schaduw in figcaption
+            text-shadow: 2px 2px 2px black;
+    (3) Eerste 3 lijnen tonen van de paragrafen
+            line-height:1em;
+	        height:3em;
+    (4) Herschaling van de figuren 
+            aspect-ratio: 400 / 225;
+        s    object-fit:cover;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    margin: 0 auto;
+}
+
+#Nummer1{
+    width: 60%;
+    padding-left: 0;
+}
+
+#figuurmeteekhoorn {
+    width: 300px;
+    float: left;
+    height: 350px;
+    margin-right: 30px;
+    margin-bottom: 60px;
+}
+
+#imgeekhoorn {
+    height: 400px;
+}
+
+#figcaptioneekhorn {
+    position: relative;
+    bottom: 25px;
+    font-style: italic;
+    color: white;
+    font-size: 0.9em;
+    text-shadow: 2px 2px 2px black;
+}
+
+.Nummer2en3 {
+    width: 39%;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.Nummer2en3 p {
+    line-height:1em;
+    height:3em;
+    overflow: hidden;
+}
+
+.Nummer4tot6 {
+    width: 33%;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.Nummer4tot6 p {
+    line-height:1em;
+    height:3em;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+nav {
+    border: orange 2px solid;
+    position: fixed;
+    width: 250px;
+    top: 20px;
+    right: 20px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1.4em;
+    z-index: 9999;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    list-style: none;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+input {
+    width: 100px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+#natuurbalk {
+    border: orange 2px solid;
+    background-color: orange;
+    text-transform: uppercase;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#titelnatuurbalk {
+    color: white;
+}
+
+span {
+    display: none;
+}
+
+#zoek {
+    width: 25px;
+    margin-left: 15px;
+    vertical-align: bottom;
+}
+
+#natuur {
+    width: 20px;
+    right: 20px;
+}
+
+header {
+    border-bottom: 2px solid orange;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 3em;
+}
+
+h2 {
+    border-left: 10px solid orange;
+    font-size: 2em;
+    padding-left: 0.5em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+article {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    float: left;
+    margin-right: 10px;
+}
+
+article figure {
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+article img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    aspect-ratio: 400 / 225;
+}
+
+figure figcaption {
+    position: absolute;
+    font-style: italic;
+    color: white;
+    font-size: 0.9em;
+    text-shadow: 2px 2px 2px black;
+    right: 10px;
+    bottom: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFA500;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+}
+
+@media (max-width: 1600px) {
+
+    main {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    footer {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        border: none;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+   input {
+       margin-left: 240px;
+   }
+
+   nav ul li {
+       margin-top: 5px;
+   }
+
+    #natuurbalk {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 290px;
+        height: 40px;
+        text-align: center;
+        padding-left: 0;
+        padding-top: 4px;
+        margin: 0;
+    }
+
+    nav img {
+        display: none;
+    }
+
+    nav span {
+        display: inline;
+    }
+
+    .Nummer2en3 {
+        width: 38.5%;
+    }
+
+    header {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    nav input {
+        display: none;
+    }
+    nav li {
+        display: block;
+    }
+    figure figcaption {
+        display: none;
+    }
+
+    figure img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        aspect-ratio: 400 / 225;
+    }
+
+    #Nummer1 {
+        width: 250px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+
+    #figuurmeteekhoorn {
+        height: 120px;
+        float: none;
+        margin-bottom: 30px;
+    }
+
+    #tekstNummer1 {
+        line-height:1em;
+        height:3em;
+        overflow: hidden;
+        margin-top: 0;
+        margin-left: 10px;
+    }
+
+    #h3_Nummer1 {
+        margin-left: 10px;
+    }
+
+    #imgeekhoorn {
+        width: 240px;
+        height: 135px;
+        margin-right: 40px;
+    }
+
+    .Nummer2en3 {
+        width: 250px;
+    }
+
+    .Nummer4tot6 {
+        width: 250px;
+    }
+
+    nav {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        border-bottom: 2px solid orange;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    #natuurbalk {
+       width: 100%;
+    }
+
+    header {
+        display: none;
+    }
+
+}
+
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+    article {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    figure img {
+        width: 100%;
+    }
+
+    #Nummer1 {
+        width: 100%;
+    }
+
+    #imgeekhoorn {
+        width: 100%;
+    }
+
+    .Nummer2en3 {
+        width: 100%;
+    }
+
+    .Nummer4tot6 {
+        width: 100%;
+    }
+
+    #tekstNummer1 {
+        display: none;
+    }
+    .text2tot6 {
+        display: none;
+    }
+}
+
+
+
+
+
